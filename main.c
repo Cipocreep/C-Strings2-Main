@@ -165,6 +165,8 @@ void	test_ex3(int (*testex)(char *, char *, unsigned int))
 	printf("Testing with ft_strcmp('AAA', 'ZZZ', 0), the result should be %i, and our result is %i\n", strncmp("AAA", "ZZZ", 0), testex("AAA", "ZZZ", 0));
 	assert(testex("AAA", "ZZZ", 0) == 0);
 
+	printf("Testing with ft_strcmp('', '', 6), the result should be %i, and our result is %i\n", strncmp("", "", 6), testex("", "", 0));
+	assert(testex("", "", 6) == 0);
 }
 
 void	test_ex4(char* (*testex)(char*, char*))
