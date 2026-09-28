@@ -167,6 +167,10 @@ void	test_ex3(int (*testex)(char *, char *, unsigned int))
 
 	printf("Testing with ft_strcmp('', '', 6), the result should be %i, and our result is %i\n", strncmp("", "", 6), testex("", "", 0));
 	assert(testex("", "", 6) == 0);
+
+	printf("Testing with ft_strcmp('', 'G', 6), the result should be %i, and our result is %i\n", strncmp("", "G", 1), testex("", "G", 1));
+	assert(testex("", "G", 1) < 0);
+
 }
 
 void	test_ex4(char* (*testex)(char*, char*))
